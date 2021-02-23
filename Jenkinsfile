@@ -22,7 +22,7 @@ pipeline {
 				
 				steps {
 					echo "Region code: ${params.Region}"					
-					sleep 10					
+					sleep 1					
 				}
 		}
 
