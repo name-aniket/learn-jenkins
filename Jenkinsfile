@@ -39,6 +39,9 @@ pipeline {
 		always {
 			echo "Run regardless of the completion status of the Pipeline run."
 		}
+		changed {
+			echo "Only run if the current Pipeline run has a different status."
+		}
 	}
 
 }
