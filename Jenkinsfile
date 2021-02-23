@@ -33,22 +33,4 @@ pipeline {
 			}		
 		}
 	}
-	
-	post {
-		always {
-			echo "Run regardless of the completion status of the Pipeline run."
-		}
-		changed {
-			echo "Only run if the current Pipeline run has a different status."
-		}
-		failure {
-			echo "Only run if the current Pipeline has a "failed" status."
-		}
-		success {
-			echo "Only run if the current Pipeline has a "success" status."
-		}
-		unstable {
-			echo "Only run if the current Pipeline has an "unstable" status."
-		}
-	}
 }
