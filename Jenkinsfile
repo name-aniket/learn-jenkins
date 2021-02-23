@@ -11,13 +11,11 @@ pipeline {
 				echo "Cluster name: ${params.Cluster}"
 			}		
 		}
-		timeout(unit: 'SECONDS', time: 5) {
-			stage('Test') {
-				steps {
-					sleep 10
-					echo "Region code: ${params.Region}"
+		stage('Test') {
+				timeout(unit: 'SECONDS', time: 5){
+					echo "Region code: ${params.Region}"					
+					sleep 10					
 				}		
-			}
 		}
 		stage('Deploy') {
 			steps {
