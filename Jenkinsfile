@@ -39,16 +39,16 @@ pipeline {
 			echo "Run regardless of the completion status of the Pipeline run."
 		}
 		changed {
-			echo "Only run if the current Pipeline run has a different status from the previously completed Pipeline."
+			echo "Only run if the current Pipeline run has a different status."
 		}
 		failure {
-			echo "Only run if the current Pipeline has a "failed" status, typically denoted in the web UI with a red indication."
+			echo "Only run if the current Pipeline has a "failed" status."
 		}
 		success {
-			echo "Only run if the current Pipeline has a "success" status, typically denoted in the web UI with a blue or green indication"
+			echo "Only run if the current Pipeline has a "success" status."
 		}
 		unstable {
-			echo "Only run if the current Pipeline has an "unstable" status, usually caused by test failures, code violations, etc. Typically denoted in the web UI with a yellow indication."
+			echo "Only run if the current Pipeline has an "unstable" status."
 		}
 	}
 }
