@@ -32,5 +32,13 @@ pipeline {
 				echo "Count : ${params.Count}"
 			}		
 		}
+
 	}
+
+	post {
+		always {
+			echo "Run regardless of the completion status of the Pipeline run."
+		}
+	}
+
 }
